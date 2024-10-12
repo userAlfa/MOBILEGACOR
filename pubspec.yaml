@@ -1,0 +1,31 @@
+name: flutter_application_1
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.6
+  flutter: 
+    sdk: flutter
+  image_picker: ^0.8.3+2
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+  assets: 
+  - assets/adidas.png
+  - assets/default_profile_picture.png
+  - assets/nike.png
+  - assets/puma.png
+  - assets/reebok.png
+  - assets/SneakerSpace.png
+  - assets/Jordan-1-High-OG-Travis-Scott-x-Fragment-1.png
+  - assets/air-force-1-low-x-peaceminusone.jpg
+  - assets/adidas-nmd-r1.jpg
