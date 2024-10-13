@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CartPage extends StatefulWidget {
+  const CartPage({super.key});
+
   @override
   _CartPageState createState() => _CartPageState();
 }
@@ -77,7 +79,7 @@ class _CartPageState extends State<CartPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Lorem', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                Text('Sneakers', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                 Text('\$${prices[index]}'),
                 Text('Size: US 7'),
               ],

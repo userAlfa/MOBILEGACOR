@@ -11,7 +11,9 @@ abstract class Routes {
   static const String CART = _Paths.CART;
   static const String CHAT = _Paths.CHAT;
   static const String WISHLIST = _Paths.WISHLIST;
-  // Add more routes as needed
+  static const HTTP = _Paths.HTTP;
+  static const ARTICLE_DETAILS = _Paths.ARTICLE_DETAILS;
+  static const ARTICLE_DETAILS_WEBVIEW = _Paths.ARTICLE_DETAILS_WEBVIEW;
 }
 
 abstract class _Paths {
@@ -25,5 +27,7 @@ abstract class _Paths {
   static const String CART = '/cart';
   static const String CHAT = '/chat';
   static const String WISHLIST = '/wishlist';
-  // Add more paths as needed
+  static const HTTP = '/http_view';
+  static const ARTICLE_DETAILS = '/article_details';
+  static const ARTICLE_DETAILS_WEBVIEW = '/article_details_webview';
 }

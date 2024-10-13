@@ -4,6 +4,7 @@ import 'package:flutter_application_1/app/modules/home/views/chat_view.dart';
 import 'package:flutter_application_1/app/modules/home/views/profile_view.dart';
 import 'package:flutter_application_1/app/modules/home/views/wishlist_view.dart';
 import 'package:get/get.dart';
+import '../../http_screen/views/http_view.dart'; // Import the new ArticlePage
 
 class StorePage extends StatefulWidget {
   @override
@@ -24,7 +25,6 @@ class _StorePageState extends State<StorePage> {
     setState(() {
       _currentIndex = index; // Update the current index
     });
-
     switch (index) {
       case 0:
         // Home Page - This is the current page, do nothing
@@ -106,7 +106,7 @@ class _StorePageState extends State<StorePage> {
                 width: double.infinity,
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
-                  border: Border.all(width: 1,  color: Colors.black),
+                  border: Border.all(width: 1, color: Colors.black),
                   color: const Color.fromARGB(255, 255, 255, 255),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
@@ -136,7 +136,7 @@ class _StorePageState extends State<StorePage> {
                           ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFFD3A335), 
+                              primary: Color(0xFFD3A335),
                             ),
                             child: Text("Shop Now"),
                           ),
@@ -198,6 +198,18 @@ class _StorePageState extends State<StorePage> {
                   _buildProductCard('Adidas NMD', 'assets/adidas-nmd-r1.jpg', 2800000, 4.9),
                 ],
               ),
+              SizedBox(height: 24), // Add space for Visit Article Button
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Get.to(HttpView()); // Navigate to ArticlePage
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFD3A335), // Same color as theme
+                  ),
+                  child: Text('Visit Article'),
+                ),
+              ),
             ],
           ),
         ),
@@ -224,7 +236,6 @@ class _StorePageState extends State<StorePage> {
       ),
     );
   }
-  
 
   Widget _buildBrandIcon(String assetPath) {
     return Container(
@@ -311,5 +322,5 @@ class _StorePageState extends State<StorePage> {
         ],
       ),
     );
-  }  
+  }
 }
